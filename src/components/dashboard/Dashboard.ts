@@ -3,13 +3,13 @@ import CompomentBase from '../ComponentBase';
 import store from '../../store/index';
 
 @Component({
-  template: require('./Sample.html'),
-  name: 'Sample'
+  template: require('./Dashboard.html'),
+  name: 'Dashboard'
 })
 /**
- * Sampleコンポーネント
+ * Dashboardコンポーネント
  */
-export default class Sample extends CompomentBase {
+export default class Dashboard extends CompomentBase {
 
   created() {
     store.commit('setSampleText', 'hoge');

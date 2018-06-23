@@ -5,7 +5,7 @@
   "main": "",
   "scripts": {
     "clean": "rimraf ./dist",
-    "create-dist": "yarn run clean && mkdirp ./dist/js && cpx ./src/index.html ./dist",
+    "create-dist": "yarn run clean && mkdirp ./dist/js && mkdirp ./dist/css && cpx ./src/index.html ./dist && cpx ./src/styles/app.css ./dist/css",
     "build-dev": "yarn run create-dist && webpack --mode development",
     "build": "yarn run create-dist && webpack --mode production",
     "start": "yarn run build-dev && webpack-dev-server",
