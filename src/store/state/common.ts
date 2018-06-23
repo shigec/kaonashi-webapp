@@ -5,7 +5,7 @@ interface ICommon {
 
 const common: ICommon = {
   sampleText: '',
-  count: 0
-}
+  count: 0,
+};
 
-export default common
+export default common;

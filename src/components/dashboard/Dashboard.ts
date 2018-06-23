@@ -1,29 +1,21 @@
 import Component from 'vue-class-component';
-import CompomentBase from '../ComponentBase';
 import store from '../../store/index';
+import CompomentBase from '../ComponentBase';
 
 @Component({
   template: require('./Dashboard.html'),
-  name: 'Dashboard'
+  name: 'Dashboard',
 })
+
 /**
  * Dashboardコンポーネント
  */
 export default class Dashboard extends CompomentBase {
 
-  created() {
+  public created() {
     store.commit('setSampleText', 'hoge');
   }
 
-  updated() {
-  }
-
-  mounted() {
-  }
-
-  /**
-   * 
-   */
   private getSampleText(): string {
     return store.state.common.sampleText;
   }

@@ -1,9 +1,9 @@
 import {
+  countUp,
   setSampleText,
-  countUp
 } from './common';
 
 export default {
   setSampleText,
-  countUp
+  countUp,
 };

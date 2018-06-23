@@ -1,23 +1,15 @@
 import Component from 'vue-class-component';
-import CompomentBase from '../ComponentBase';
 import store from '../../store/index';
+import CompomentBase from '../ComponentBase';
 
 @Component({
   template: require('./Information.html'),
-  name: 'Information'
+  name: 'Information',
 })
+
 /**
- * Sampleコンポーネント
+ * Informationコンポーネント
  */
 export default class Information extends CompomentBase {
-
-  created() {
-  }
-
-  updated() {
-  }
-
-  mounted() {
-  }
 
 }

@@ -8,21 +8,21 @@ const router = new VueRouter({
   routes: [
     {
       path: '/dashboard',
-      component: Dashboard
+      component: Dashboard,
     },
     {
       path: '/members',
-      component: Members
+      component: Members,
     },
     {
       path: '/projects',
-      component: Projects
+      component: Projects,
     },
     {
       path: '*',
-      redirect: '/dashboard'
-    }
-  ]
+      redirect: '/dashboard',
+    },
+  ],
 });
 
 export default router;

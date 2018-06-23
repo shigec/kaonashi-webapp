@@ -1,23 +1,15 @@
 import Component from 'vue-class-component';
-import CompomentBase from '../ComponentBase';
 import store from '../../store/index';
+import CompomentBase from '../ComponentBase';
 
 @Component({
   template: require('./Members.html'),
-  name: 'Members'
+  name: 'Members',
 })
+
 /**
  * Membersコンポーネント
  */
 export default class Members extends CompomentBase {
-
-  created() {
-  }
-
-  updated() {
-  }
-
-  mounted() {
-  }
 
 }

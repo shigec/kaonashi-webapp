@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Information from './components/information/Information';
+import Menu from './components/menu/Menu';
 import router from './router/index';
 import store from './store/index';
-import Menu from './components/menu/Menu';
-import Information from './components/information/Information';
 
 Vue.use(VueRouter);
 
@@ -12,7 +12,7 @@ new Vue({
   router,
   components: {
     Menu,
-    Information
+    Information,
   },
   template: `
     <div id="app">
@@ -23,6 +23,6 @@ new Vue({
       </div>
     </div>
   `,
-  mounted: () => {
-  }
-}).$mount('#app')
+  // mounted: () => {
+  // },
+}).$mount('#app');

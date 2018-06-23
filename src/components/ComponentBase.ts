@@ -1,5 +1,5 @@
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 /**
  * Vue ComponentのBaseクラスです。
@@ -9,8 +9,8 @@ import Component from 'vue-class-component'
 @Component
 export default class ComponentBase extends Vue {
 
-  mounted(){
-    console.log('mouted!!!')
+  public mounted() {
+    // console.log('mouted!!!');
   }
 
 }

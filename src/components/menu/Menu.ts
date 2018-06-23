@@ -1,23 +1,15 @@
 import Component from 'vue-class-component';
-import CompomentBase from '../ComponentBase';
 import store from '../../store/index';
+import CompomentBase from '../ComponentBase';
 
 @Component({
   template: require('./Menu.html'),
-  name: 'Menu'
+  name: 'Menu',
 })
+
 /**
- * Sampleコンポーネント
+ * Menuコンポーネント
  */
 export default class Menu extends CompomentBase {
-
-  created() {
-  }
-
-  updated() {
-  }
-
-  mounted() {
-  }
 
 }
