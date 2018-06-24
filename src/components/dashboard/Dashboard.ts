@@ -12,24 +12,24 @@ import CompomentBase from '../ComponentBase';
  */
 export default class Dashboard extends CompomentBase {
 
-  public created() {
+  public created(): void {
     store.commit('setSampleText', 'hoge');
   }
 
-  private getSampleText(): string {
-    return store.state.common.sampleText;
-  }
-
-  private changeHage(): void {
-    store.commit('setSampleText', 'hage');
-  }
-
-  private getCount(): number {
+  public getCount(): number {
     return store.state.common.count;
   }
 
-  private countUp(): void {
+  public countUp(): void {
     store.commit('countUp');
+  }
+
+  public getSampleText(): string {
+    return store.state.common.sampleText;
+  }
+
+  public changeHage(): void {
+    store.commit('setSampleText', 'hage');
   }
 
 }

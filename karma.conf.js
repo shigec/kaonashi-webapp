@@ -1,5 +1,6 @@
 // Karma configuration
 // Generated on Sun Jun 24 2018 10:23:13 GMT+0900 (GMT+09:00)
+var webpackConfig = require('./webpack.config.js')
 
 module.exports = function(config) {
   config.set({
@@ -32,40 +33,19 @@ module.exports = function(config) {
     },
 
     // Webpack settings.
-    webpack: {
-      mode: 'development',
-      devtool: 'inline-source-map',
-      resolve: {
-        extensions: ['.ts', '.js', '.tsx']
-      },
-      module: {
-        rules: [
-          {
-            test: /\.tsx?$/,
-            exclude: /(test|node_modules)/,
-            use: 'istanbul-instrumenter-loader',
-            enforce: 'pre'
-          },
-          {
-            test: /\.tsx?$/,
-            use: 'ts-loader'
-          }
-        ]
-      }
-    },
+    webpack: webpackConfig,
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    // reporters: ['progress', 'junit'],
-    reporters: ['progress'],
+    reporters: ['progress', 'junit', 'coverage'],
 
-    // junitReporter: {
-    //   outputDir: 'report'
-    // },
+    junitReporter: {
+      outputDir: 'report'
+    },
 
     coverageReporter: {
-      dir: 'report',
+      dir: 'report/coverage',
       reporters: [
         {type: 'html'},
         {type: 'cobertura'}
@@ -102,7 +82,6 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity,
 
-    // 
     mime: {
       'text/x-typescript': ['ts','tsx']
     },
