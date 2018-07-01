@@ -17,3 +17,7 @@ Execute the following commands.
     $ yarn run start  
 
 And access "localhost:8080" using any browser.
+
+# Unit Test
+
+`$ yarn run test`
