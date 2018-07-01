@@ -1,11 +1,15 @@
 var path = require('path');
 var webpack = require('webpack');
 var prod = process.argv.indexOf('-p') !== -1;
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry: [
+    './src/index.ts',
+    './src/styles/index.scss'
+  ],
   output: {
     path: path.join(__dirname, 'dist/js'),
     filename: 'bundle.js'
@@ -27,8 +31,28 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader?minimize=false'
-      }
-    ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options:
+            {
+              sourceMap:true,
+              importLoaders: 1
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+        ],
+      },
+    ],
   },
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
@@ -47,7 +71,10 @@ module.exports = {
   },
   devtool: '#eval-source-map',
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '../css/bundle.css',
+    }),
   ]
 };
 
