@@ -21,3 +21,5 @@ And access "localhost:8080" using any browser.
 # Unit Test
 
 `$ yarn run test`
+
+The coverage report is output to "report/".
