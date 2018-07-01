@@ -1,6 +1,20 @@
 // Karma configuration
 // Generated on Sun Jun 24 2018 10:23:13 GMT+0900 (GMT+09:00)
-var webpackConfig = require('./webpack.config.js')
+
+// Add rule for coverage report.
+var webpackConfig = require('./webpack.config.js');
+webpackConfig.module.rules.push({
+  test: /\.ts$/,
+  enforce: 'post',
+  loader: 'istanbul-instrumenter-loader',
+  exclude: [
+    'node_modules',
+    'test',
+  ],
+  query: {
+    esModules: true
+  }
+});
 
 module.exports = function(config) {
   config.set({
