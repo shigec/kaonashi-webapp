@@ -41,7 +41,8 @@ module.exports = {
             options:
             {
               sourceMap:true,
-              importLoaders: 1
+              importLoaders: 1,
+              url: false
             },
           },
           {

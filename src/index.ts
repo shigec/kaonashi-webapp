@@ -16,8 +16,8 @@ new Vue({
   },
   template: `
     <div id="app">
-      <Information id="information"/>
-      <Menu id="menu"/>
+      <Information id="header"/>
+      <Menu id="aside"/>
       <div id="main">
         <router-view class="view"></router-view>
       </div>
