@@ -9,7 +9,7 @@
     "clean-all": "yarn run clean-dist && yarn run clean-report",
     "create-dist": "mkdirp ./dist/js && mkdirp ./dist/css && mkdirp ./dist/resources/images",
     "refresh-dist": "yarn run clean-dist && yarn run create-dist",
-    "copy-assets": "cpx ./src/index.html ./dist && cpx ./src/styles/app.css ./dist/css && cpx ./src/resources/images/*.* ./dist/resources/images",
+    "copy-assets": "cpx ./src/index.html ./dist && cpx ./src/styles/app.css ./dist/css && cpx './src/resources/images/*.{png,svg}' ./dist/resources/images",
     "lint": "tslint 'src/**/*.ts'",
     "build-dev": "yarn run refresh-dist && yarn run copy-assets && webpack --mode development",
     "build-dev-lint": "yarn run refresh-dist && yarn run copy-assets && yarn run lint && webpack --mode development",
