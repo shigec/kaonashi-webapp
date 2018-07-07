@@ -1,14 +1,28 @@
 <div>
   <div id="information">
     <div id="information-logo">
+      <div class="logo-image"></div>
     </div>
     <div id="information-main">
+      <div class="user-information">
+        User : {{getUserName()}} / ID : {{getUserId()}}
+      </div>
     </div>
     <div id="information-notification">
-      <button class="notification-button"></button> 
+      <div v-if="!getNotificationButtonActive()">
+        <button class="notification-button" v-on:mouseenter="activeNotificationButton()" v-on:mouseleave="inactiveNotificationButton()"></button>
+      </div>
+      <div v-else>
+          <button class="notification-button-active" v-on:mouseenter="activeNotificationButton()" v-on:mouseleave="inactiveNotificationButton()"></button>
+      </div>
     </div>
     <div id="information-menu">
-        <button class="menu-button"></button> 
+      <div v-if="!getMenuButtonActive()">
+        <button class="menu-button" v-on:mouseenter="activeMenuButton()" v-on:mouseleave="inactiveMenuButton()"></button>
+      </div>
+      <div v-else>
+        <button class="menu-button-active" v-on:mouseenter="activeMenuButton()" v-on:mouseleave="inactiveMenuButton()"></button>
+      </div>
     </div>
   </div>
 </div>

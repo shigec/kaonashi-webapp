@@ -1,17 +1,25 @@
 #information {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 150px 1fr 50px 50px;
+  grid-template-columns: 150px 1fr 70px 70px;
 
   width: 100%;
   height: 100%;
+  align-items: center;
+  justify-items: center;
 }
 
 #information-logo {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row: 1;
+}
+
+.logo-image {
   background: url('../resources/images/logo-sample.png') no-repeat center center;
+  background-size: contain;
+  width: 120px;
+  height: 60px;
   background-size: contain;
 }
 
@@ -39,12 +47,25 @@
   height: 32px;
   background-size: contain;
   border: none;
+  margin: 10px 10px 10px 10px;
 }
 
 .notification-button {
-  @include icon-button('../resources/images/bell.svg');
+  @include icon-button('../resources/images/notification.svg');
+}
+
+.notification-button-active {
+  @include icon-button('../resources/images/notification-active.svg');
 }
 
 .menu-button {
-  @include icon-button('../resources/images/list2.svg')
+  @include icon-button('../resources/images/menu.svg')
+}
+
+.menu-button-active {
+  @include icon-button('../resources/images/menu-active.svg')
+}
+
+.user-information {
+  
 }
