@@ -1,11 +1,30 @@
 #menu {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 52px) 1fr;
 
   width: 100%;
   height: 100%;
   align-items: center;
+}
+
+@mixin menu-item($row) {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 1fr;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: $row;
+  grid-row-end: $row + 1;
+
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#menu-item-dashboard {
+  @include menu-item(1);
 }
 
 #menu-dashboard-icon {
@@ -22,6 +41,10 @@
   grid-row-end: 2;
 }
 
+#menu-item-human {
+  @include menu-item(2);
+}
+
 #menu-human-icon {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -34,6 +57,10 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+}
+
+#menu-item-project {
+  @include menu-item(3);
 }
 
 #menu-project-icon {
@@ -50,6 +77,10 @@
   grid-row-end: 4;
 }
 
+#menu-item-favorite {
+  @include menu-item(4);
+}
+
 #menu-favorite-icon {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -64,6 +95,10 @@
   grid-row-end: 5;
 }
 
+#menu-item-account {
+  @include menu-item(5);
+}
+
 #menu-account-icon {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -76,6 +111,10 @@
   grid-column-end: 3;
   grid-row-start: 5;
   grid-row-end: 6;
+}
+
+#menu-item-setting {
+  @include menu-item(6);
 }
 
 #menu-setting-icon {
@@ -96,6 +135,10 @@
   text-decoration: none;
   font-size: 14px;
   color: #000000;
+}
+
+.menu-mouseover-style {
+  
 }
 
 @mixin menu-icon($imgUrl) {
