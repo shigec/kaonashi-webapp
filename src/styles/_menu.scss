@@ -131,16 +131,6 @@
   grid-row-end: 7;
 }
 
-.menu-text-style {
-  text-decoration: none;
-  font-size: 14px;
-  color: #000000;
-}
-
-.menu-mouseover-style {
-  
-}
-
 @mixin menu-icon($imgUrl) {
   background: url($imgUrl) no-repeat center center;
   width: 32px;
@@ -154,46 +144,64 @@
   @include menu-icon('../resources/images/dashboard.svg');
 }
 
-.dashboard-icon-active {
-  @include menu-icon('../resources/images/dashboard-active.svg');
+.dashboard-icon-selected {
+  @include menu-icon('../resources/images/dashboard-selected.svg');
 }
 
 .human-icon {
   @include menu-icon('../resources/images/human.svg');
 }
 
-.human-icon-active {
-  @include menu-icon('../resources/images/human-active.svg');
+.human-icon-selected {
+  @include menu-icon('../resources/images/human-selected.svg');
 }
 
 .project-icon {
   @include menu-icon('../resources/images/project.svg');
 }
 
-.project-icon-active {
-  @include menu-icon('../resources/images/project-active.svg');
+.project-icon-selected {
+  @include menu-icon('../resources/images/project-selected.svg');
 }
 
 .favorite-icon {
   @include menu-icon('../resources/images/favorite.svg');
 }
 
-.favorite-icon-active {
-  @include menu-icon('../resources/images/favorite-active.svg');
+.favorite-icon-selected {
+  @include menu-icon('../resources/images/favorite-selected.svg');
 }
 
 .account-icon {
   @include menu-icon('../resources/images/account.svg');
 }
 
-.account-icon-active {
-  @include menu-icon('../resources/images/account-active.svg');
+.account-icon-selected {
+  @include menu-icon('../resources/images/account-selected.svg');
 }
 
 .setting-icon {
   @include menu-icon('../resources/images/setting.svg');
 }
 
-.setting-icon-active {
-  @include menu-icon('../resources/images/setting-active.svg');
+.setting-icon-selected {
+  @include menu-icon('../resources/images/setting-selected.svg');
+}
+
+.menu-text-style {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.menu-item-selected {
+  background-color: #2595C7;
+}
+
+.menu-text-selected {
+  color: #FFFFFF;
+}
+
+.menu-text {
+  color: #000000;
 }

@@ -1,10 +1,10 @@
 import {
   countUp,
+  getSelectedMenu,
   setSampleText,
+  setSelectedMenu,
   setUserId,
   setUserName,
-  setSelectedMenu,
-  getSelectedMenu,
 } from './common';
 
 import {

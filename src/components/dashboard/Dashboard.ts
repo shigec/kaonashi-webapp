@@ -1,5 +1,5 @@
-import {MENU} from '../../common/constant';
 import Component from 'vue-class-component';
+import {MENU} from '../../common/constant';
 import store from '../../store/index';
 import CompomentBase from '../ComponentBase';
 

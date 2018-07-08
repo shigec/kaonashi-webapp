@@ -1,51 +1,63 @@
 <div>
   <div id="menu">
-    <div id="menu-item-dashboard">
+    <div id="menu-item-dashboard" v-bind:class="{'menu-item-selected':isSelected(0)}">
       <div id="menu-dashboard-icon">
-        <div class="dashboard-icon"></div>
+        <div v-bind:class="[isSelected(0) ? 'dashboard-icon-selected' : 'dashboard-icon']"></div>
       </div>
       <div id="menu-dashboard-text">
-        <router-link to="/dashboard" class="menu-text-style">ダッシュボード</router-link>
+        <router-link to="/dashboard" class="menu-text-style" v-bind:class="[isSelected(0) ? 'menu-text-selected' : 'menu-text']">
+          ダッシュボード
+        </router-link>
       </div>
     </div>
-    <div id="menu-item-human">
+    <div id="menu-item-human" v-bind:class="{'menu-item-selected':isSelected(1)}">
       <div id="menu-human-icon">
-        <div class="human-icon"></div>
+        <div v-bind:class="[isSelected(1) ? 'human-icon-selected' : 'human-icon']"></div>
       </div>
       <div id="menu-human-text">
-        <router-link to="/members" class="menu-text-style">人員情報</router-link>
+        <router-link to="/members" class="menu-text-style" v-bind:class="[isSelected(1) ? 'menu-text-selected' : 'menu-text']">
+          人員情報
+        </router-link>
       </div>
     </div>
-    <div id="menu-item-project">
+    <div id="menu-item-project" v-bind:class="{'menu-item-selected':isSelected(2)}">
       <div id="menu-project-icon">
-        <div class="project-icon"></div>
+        <div v-bind:class="[isSelected(2) ? 'project-icon-selected' : 'project-icon']"></div>
       </div>
       <div id="menu-project-text">
-        <router-link to="/projects" class="menu-text-style">案件情報</router-link>
+        <router-link to="/projects" class="menu-text-style" v-bind:class="[isSelected(2) ? 'menu-text-selected' : 'menu-text']">
+          案件情報
+        </router-link>
       </div>
     </div>
-    <div id="menu-item-favorite">
+    <div id="menu-item-favorite" v-bind:class="{'menu-item-selected':isSelected(3)}">
       <div id="menu-favorite-icon">
-        <div class="favorite-icon"></div>
+        <div v-bind:class="[isSelected(3) ? 'favorite-icon-selected' : 'favorite-icon']"></div>
       </div>
       <div id="menu-favorite-text">
-        <router-link to="/projects" class="menu-text-style">お気に入り</router-link>
+        <router-link to="/projects" class="menu-text-style" v-bind:class="[isSelected(3) ? 'menu-text-selected' : 'menu-text']">
+          お気に入り
+        </router-link>
       </div>
     </div>
-    <div id="menu-item-account">
+    <div id="menu-item-account" v-bind:class="{'menu-item-selected':isSelected(4)}">
       <div id="menu-account-icon">
-        <div class="account-icon"></div>
+        <div v-bind:class="[isSelected(4) ? 'account-icon-selected' : 'account-icon']"></div>
       </div>
       <div id="menu-account-text">
-        <router-link to="/projects" class="menu-text-style">アカウント管理</router-link>
+        <router-link to="/projects" class="menu-text-style" v-bind:class="[isSelected(4) ? 'menu-text-selected' : 'menu-text']">
+          アカウント管理
+        </router-link>
       </div>
     </div>
-    <div id="menu-item-setting">
+    <div id="menu-item-setting" v-bind:class="{'menu-item-selected':isSelected(5)}">
       <div id="menu-setting-icon">
-        <div class="setting-icon"></div>
+        <div v-bind:class="[isSelected(5) ? 'setting-icon-selected' : 'setting-icon']"></div>
       </div>
       <div id="menu-setting-text">
-        <router-link to="/projects" class="menu-text-style">設定</router-link>
+        <router-link to="/projects" class="menu-text-style" v-bind:class="[isSelected(5) ? 'menu-text-selected' : 'menu-text']">
+          設定
+        </router-link>
       </div>
     </div>
   </div>

@@ -1,7 +1,6 @@
 import Component from 'vue-class-component';
 import store from '../../store/index';
 import CompomentBase from '../ComponentBase';
-import {MENU} from '../../common/constant';
 
 @Component({
   template: require('./Menu.html'),
