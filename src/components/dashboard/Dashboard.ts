@@ -1,4 +1,5 @@
 import Component from 'vue-class-component';
+import {MENU} from '../../common/constant';
 import store from '../../store/index';
 import CompomentBase from '../ComponentBase';
 
@@ -14,6 +15,10 @@ export default class Dashboard extends CompomentBase {
 
   public created(): void {
     store.commit('setSampleText', 'hoge');
+  }
+
+  public mounted(): void {
+    store.commit('setSelectedMenu', MENU.DASHBOARD);
   }
 
   public getCount(): number {

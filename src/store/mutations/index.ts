@@ -1,6 +1,8 @@
 import {
   countUp,
+  getSelectedMenu,
   setSampleText,
+  setSelectedMenu,
   setUserId,
   setUserName,
 } from './common';
@@ -15,6 +17,8 @@ export default {
   countUp,
   setUserName,
   setUserId,
+  setSelectedMenu,
+  getSelectedMenu,
   setActiveNotificationButton,
   setActiveMenuButton,
 };

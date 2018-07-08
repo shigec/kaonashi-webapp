@@ -12,4 +12,9 @@ import CompomentBase from '../ComponentBase';
  */
 export default class Menu extends CompomentBase {
 
+  public isSelected(menuNo: number): boolean {
+    const selectedMenuNo: number = store.state.common.selectedMenu;
+    return menuNo === selectedMenuNo;
+  }
+
 }
