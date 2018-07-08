@@ -1,0 +1,156 @@
+#menu {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: repeat(6, 52px) 1fr;
+
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#menu-dashboard-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#menu-dashboard-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#menu-human-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#menu-human-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#menu-project-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#menu-project-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+#menu-favorite-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#menu-favorite-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+#menu-account-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#menu-account-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+#menu-setting-icon {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+#menu-setting-text {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.menu-text-style {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000000;
+}
+
+@mixin menu-icon($imgUrl) {
+  background: url($imgUrl) no-repeat center center;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  border: none;
+  margin: 10px 10px 10px 10px;
+}
+
+.dashboard-icon {
+  @include menu-icon('../resources/images/dashboard.svg');
+}
+
+.dashboard-icon-active {
+  @include menu-icon('../resources/images/dashboard-active.svg');
+}
+
+.human-icon {
+  @include menu-icon('../resources/images/human.svg');
+}
+
+.human-icon-active {
+  @include menu-icon('../resources/images/human-active.svg');
+}
+
+.project-icon {
+  @include menu-icon('../resources/images/project.svg');
+}
+
+.project-icon-active {
+  @include menu-icon('../resources/images/project-active.svg');
+}
+
+.favorite-icon {
+  @include menu-icon('../resources/images/favorite.svg');
+}
+
+.favorite-icon-active {
+  @include menu-icon('../resources/images/favorite-active.svg');
+}
+
+.account-icon {
+  @include menu-icon('../resources/images/account.svg');
+}
+
+.account-icon-active {
+  @include menu-icon('../resources/images/account-active.svg');
+}
+
+.setting-icon {
+  @include menu-icon('../resources/images/setting.svg');
+}
+
+.setting-icon-active {
+  @include menu-icon('../resources/images/setting-active.svg');
+}
