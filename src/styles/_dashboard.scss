@@ -1,0 +1,109 @@
+#dashboard {
+  display: grid;
+  grid-template-rows: 100px 30px 1fr;
+  grid-template-columns: 1fr;
+
+  // width: 100%;
+  // height: 100%;
+  align-items: center;
+  justify-items: center;
+
+  margin: 15px 5% 10px 5%;
+}
+
+#dashboard-indicator-area {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: 1fr;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  // width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+@mixin dashboard-indicator-item($col, $borderColor) {
+  display: grid;
+  grid-template-columns: 1fr 82px;
+  grid-template-rows: 1fr;
+
+  grid-column-start: $col;
+  grid-column-end: $col + 1;
+  grid-row: 1 / 2;
+
+  border: solid;
+  border-width: 2px;
+  border-radius: 15px;
+  border-color: $borderColor;
+
+  // width: 100%;
+  height: 100%;
+  width: -webkit-fill-available;
+  margin: 10px;
+  align-items: center;
+}
+
+#date-indicator {
+  @include dashboard-indicator-item(1, lightpink);
+}
+
+#members-indicator {
+  @include dashboard-indicator-item(2, palegreen);
+}
+
+#projects-indicator {
+  @include dashboard-indicator-item(3, #77B8DA);
+}
+
+#dashboard-whats-new-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px repeat(10, 50px);
+
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+#dashboard-whats-new-title {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  align-items: center;
+}
+
+#dashboard-whats-new-title-icon {
+  grid-column: 1 / 2;
+  grid-row: 1;
+
+  background: url('../resources/images/info.svg') no-repeat center center;
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  border: none;
+  margin: 0px 10px 0px 10px;
+}
+
+#dashboard-whats-new-title-text {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@mixin dashboard-whats-new-item($row) {
+  display: grid;
+  grid-template-columns: repeat(2, 100px) 1fr;
+  grid-template-rows: 1fr;
+
+  grid-column: 1 / 2;
+  grid-row-start: $row;
+  grid-row-end: $row + 1;
+}

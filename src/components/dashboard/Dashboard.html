@@ -1,6 +1,22 @@
-<div id="dashboard">
-  SampleText={{getSampleText()}}
-  <button v-on:click="changeHage()">Hageになるよ</button>
-  Count={{getCount()}}
-  <button v-on:click="countUp()">値がふえるよ</button>
+<div>
+  <div id="dashboard">
+    <div id="dashboard-indicator-area">
+      <div id="date-indicator"></div>
+      <div id="members-indicator">
+          Count={{getCount()}}
+          <button v-on:click="countUp()">値がふえるよ</button>
+      </div>
+      <div id="projects-indicator">
+          Count={{getCount()}}
+      </div>
+    </div>
+    <div id="dashboard-whats-new-area">
+      <div id="dashboard-whats-new-title">
+        <div id="dashboard-whats-new-title-icon"></div>
+        <div id="dashboard-whats-new-title-text">
+          What's New
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
