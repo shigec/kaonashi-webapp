@@ -39,8 +39,11 @@
   color: white;
 
   width: -webkit-fill-available;
+  height: 100%;
   margin: 0px 15px;
   align-items: center;
+  
+  text-decoration: none;
 }
 
 #date-indicator {
@@ -98,7 +101,7 @@
 #dashboard-whats-new-area {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px repeat(10, 50px);
+  grid-template-rows: 50px 1fr;
 
   grid-column: 1 / 2;
   grid-row: 3 / 4;
@@ -135,6 +138,12 @@
   grid-row: 1;
   font-size: 24px;
   font-weight: bold;
+}
+
+#dashboard-whats-new-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 50px);
 }
 
 #dashboard-whats-new-item {

@@ -88,7 +88,7 @@ export default class Dashboard extends CompomentBase {
         date: '2018-07-09',
         kind: 'PROJECT',
         text:  'TVメタ提供サービス開発 (SNC大崎)が追加されました。',
-      }
+      },
     ];
   }
 
