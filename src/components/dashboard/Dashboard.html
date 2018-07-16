@@ -2,15 +2,18 @@
   <div id="dashboard">
     <div id="dashboard-indicator-area">
       <div id="date-indicator">
-        <div class="indicator-text"></div>
+        <div>
+          <div class="indicator-yyyy-text">2018</div>
+          <div class="indicator-mmdd-text">7/13</div>
+        </div>
         <div class="indicator-date-icon"></div>
       </div>
       <div id="members-indicator">
-          <div class="indicator-text">100</div>
+          <div class="indicator-text">1053</div>
         <div class="indicator-member-icon"></div>
       </div>
       <div id="projects-indicator">
-          <div class="indicator-text">90</div>
+          <div class="indicator-text">103</div>
         <div class="indicator-project-icon"></div>
       </div>
     </div>
@@ -18,7 +21,7 @@
       <div id="dashboard-whats-new-title">
         <div id="dashboard-whats-new-title-icon"></div>
         <div id="dashboard-whats-new-title-text">
-          What's News
+          What's New
         </div>
       </div>
       <div v-for="(item, index) in getWhatsNewList()" id ="dashboard-whats-new-item">

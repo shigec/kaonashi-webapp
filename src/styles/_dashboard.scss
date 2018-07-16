@@ -3,8 +3,6 @@
   grid-template-rows: 100px 30px 1fr;
   grid-template-columns: 1fr;
 
-  // width: 100%;
-  // height: 100%;
   align-items: center;
   justify-items: center;
 
@@ -13,19 +11,17 @@
 
 #dashboard-indicator-area {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 350px);
   grid-template-rows: 1fr;
 
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
-  // width: 100%;
-  // height: 100%;
   align-items: center;
   justify-items: center;
 }
 
-@mixin dashboard-indicator-item($col, $borderColor) {
+@mixin dashboard-indicator-item($col, $color) {
   display: grid;
   grid-template-columns: 1fr 82px;
   grid-template-rows: 1fr;
@@ -37,21 +33,22 @@
   border: solid;
   border-width: 2px;
   border-radius: 10px;
-  border-color: $borderColor;
+  border-color: $color;
 
-  // width: 100%;
-  // height: 100%;
+  background-color: $color;
+  color: white;
+
   width: -webkit-fill-available;
-  margin: 0px 5px;
+  margin: 0px 15px;
   align-items: center;
 }
 
 #date-indicator {
-  @include dashboard-indicator-item(1, lightpink);
+  @include dashboard-indicator-item(1, #ffb6c1);
 }
 
 #members-indicator {
-  @include dashboard-indicator-item(2, palegreen);
+  @include dashboard-indicator-item(2, #65aa5a);
 }
 
 #projects-indicator {
@@ -60,6 +57,16 @@
 
 .indicator-text {
   font-size: 64px;
+  text-align: -webkit-center;
+}
+
+.indicator-yyyy-text {
+  font-size: 16px;
+  text-align: -webkit-center;
+}
+
+.indicator-mmdd-text {
+  font-size: 56px;
   text-align: -webkit-center;
 }
 
@@ -77,15 +84,15 @@
 }
 
 .indicator-date-icon {
-  @include indicator-icon('../resources/images/calendar.svg');
+  @include indicator-icon('../resources/images/calendar-indicator.svg');
 }
 
 .indicator-member-icon {
-  @include indicator-icon('../resources/images/human.svg');
+  @include indicator-icon('../resources/images/member-indicator.svg');
 }
 
 .indicator-project-icon {
-  @include indicator-icon('../resources/images/project.svg');
+  @include indicator-icon('../resources/images/project-indicator.svg');
 }
 
 #dashboard-whats-new-area {
@@ -120,7 +127,7 @@
   height: 32px;
   background-size: contain;
   border: none;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px 0px 0px;
 }
 
 #dashboard-whats-new-title-text {
@@ -130,22 +137,6 @@
   font-weight: bold;
 }
 
-// @mixin dashboard-whats-new-item($row) {
-//   display: grid;
-//   grid-template-columns: repeat(2, 100px) 1fr;
-//   grid-template-rows: 1fr;
-
-//   grid-column: 1 / 2;
-//   grid-row-start: $row;
-//   grid-row-end: $row + 1;
-// }
-
-// #dashboard-whats-new-item {
-//   display: flex;
-//   border-bottom: solid;
-//   border-width: 1px;
-//   border-color: cornflowerblue;
-// }
 #dashboard-whats-new-item {
   display: grid;
   grid-template-columns: 100px 80px 1fr;
@@ -154,6 +145,8 @@
   border-bottom: solid;
   border-width: 1px;
   border-color: cornflowerblue;
+
+  align-items: center;
 }
 
 .dashboard-whats-new-item-margin {
@@ -163,23 +156,22 @@
 @mixin dashboard-kind($color) {
   background-color: $color;
   border-radius: 5px;
-  height: 90%;
   text-align: -webkit-center;
-  margin-top: auto;
-  margin-bottom: auto;
+  padding-bottom: 2px;
 
   font-size: 14px;
-  font-weight: bold;
+  color: white;
+  // font-weight: bold;
 }
 
 .dashboard-kind-system {
-  @include dashboard-kind(lightpink)
+  @include dashboard-kind(#ffb6c1)
 }
 
 .dashboard-kind-member {
-  @include dashboard-kind(springgreen)
+  @include dashboard-kind(#65aa5a)
 }
 
 .dashboard-kind-project {
-  @include dashboard-kind(lightskyblue)
+  @include dashboard-kind(#77B8DA)
 }
