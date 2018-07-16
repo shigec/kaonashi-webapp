@@ -41,52 +41,52 @@ export default class Dashboard extends CompomentBase {
     return [
       {
         date: '2018-07-13',
-        kind: 'member',
-        text:  'ほげ　ほげたろうが新規登録されました。',
+        kind: 'MEMBER',
+        text:  'Aさんが新規登録されました。',
       },
       {
         date: '2018-07-13',
-        kind: 'member',
-        text:  'ほげ　ほげじろうが新規登録されました。',
+        kind: 'MEMBER',
+        text:  'Bさんが新規登録されました。',
       },
       {
         date: '2018-07-12',
-        kind: 'project',
-        text:  'ID基盤PJ (SNC品川シーサイド)',
+        kind: 'MEMBER',
+        text:  'Cさんが削除されました。',
       },
       {
         date: '2018-07-12',
-        kind: 'system',
+        kind: 'SYSTEM',
         text:  'メンテナンス情報 2018-07-26 02:00〜05:00',
       },
       {
         date: '2018-07-11',
-        kind: 'project',
+        kind: 'PROJECT',
         text:  'ID基盤開発 (SNC品川シーサイド)が追加されました。',
       },
       {
         date: '2018-07-11',
-        kind: 'project',
+        kind: 'PROJECT',
         text:  'ビッグデータ解析 (SNC品川シーサイド)が追加されました。',
       },
       {
         date: '2018-07-11',
-        kind: 'member',
-        text:  'ほげ　ほげざぶろうが新規登録されました。',
+        kind: 'MEMBER',
+        text:  'Dさんが新規登録されました。',
       },
       {
         date: '2018-07-10',
-        kind: 'member',
-        text:  'ほげ　ほげしろうが削除されました。',
+        kind: 'MEMBER',
+        text:  'Eさんが削除されました。',
       },
       {
         date: '2018-07-09',
-        kind: 'system',
+        kind: 'SYSTEM',
         text:  'メンテナンス情報 2018-07-19 02:00〜05:00',
       },
       {
         date: '2018-07-09',
-        kind: 'project',
+        kind: 'PROJECT',
         text:  'TVメタ提供サービス開発 (SNC大崎)が追加されました。',
       }
     ];

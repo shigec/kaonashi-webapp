@@ -1,21 +1,30 @@
 <div>
   <div id="dashboard">
     <div id="dashboard-indicator-area">
-      <div id="date-indicator"></div>
+      <div id="date-indicator">
+        <div class="indicator-text"></div>
+        <div class="indicator-date-icon"></div>
+      </div>
       <div id="members-indicator">
-          Count={{getCount()}}
-          <button v-on:click="countUp()">値がふえるよ</button>
+          <div class="indicator-text">100</div>
+        <div class="indicator-member-icon"></div>
       </div>
       <div id="projects-indicator">
-          Count={{getCount()}}
+          <div class="indicator-text">90</div>
+        <div class="indicator-project-icon"></div>
       </div>
     </div>
     <div id="dashboard-whats-new-area">
       <div id="dashboard-whats-new-title">
         <div id="dashboard-whats-new-title-icon"></div>
         <div id="dashboard-whats-new-title-text">
-          What's New
+          What's News
         </div>
+      </div>
+      <div v-for="(item, index) in getWhatsNewList()" id ="dashboard-whats-new-item">
+        <div class="dashboard-whats-new-item-margin">{{item.date}}</div>
+        <div class="dashboard-whats-new-item-margin" :class="[item.kind === 'SYSTEM' ? 'dashboard-kind-system' : item.kind === 'MEMBER' ? 'dashboard-kind-member' :'dashboard-kind-project']">{{item.kind}}</div>
+        <div>{{item.text}}</div>
       </div>
     </div>
   </div>
