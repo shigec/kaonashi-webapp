@@ -15,7 +15,7 @@
       <div v-else>
         <div :class="[item.gender === 'M' ? 'memberlist-item-m' : 'memberlist-item-f']">
           <div>{{item.id}}</div>
-          <div>{{item.name}}</div>
+          <div :class="[item.gender === 'M' ? 'memberlist-name-color-m' : 'memberlist-name-color-f']">{{item.name}}</div>
           <div>{{item.age}}</div>
           <div>{{item.dept}}</div>
           <div>{{item.unit}}</div>
