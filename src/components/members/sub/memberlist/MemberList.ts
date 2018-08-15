@@ -1,5 +1,4 @@
 import Component from 'vue-class-component';
-import {MENU} from '../../../../common/constant';
 import store from '../../../../store/index';
 import CompomentBase from '../../../ComponentBase';
 
@@ -13,8 +12,8 @@ import CompomentBase from '../../../ComponentBase';
  */
 export default class MemberList extends CompomentBase {
 
-  public mounted(): void {
-  }
+  // public mounted(): void {
+  // }
 
   public getListData(): any[] {
     return store.state.members.members;
@@ -22,10 +21,13 @@ export default class MemberList extends CompomentBase {
 
   public shouldFilter(text: string): boolean {
     const filterTeam: string = store.state.members.filterTeam;
-    if (!text || !filterTeam) {
+    if (!text) {
+      return true;
+    }
+    if (!filterTeam) {
       return false;
     }
-    return text.toLowerCase().indexOf(filterTeam) === -1;
+    return text.toLowerCase().indexOf(filterTeam.toLocaleLowerCase()) === -1;
   }
 
 }

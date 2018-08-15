@@ -15,7 +15,7 @@
 
 @mixin memberlist-grid() {
   display: grid;
-  grid-template-columns: 200px 150px 60px 60px 80px 80px 150px 1fr;
+  grid-template-columns: 150px 150px repeat(4, 100px) 150px 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -28,6 +28,7 @@
   font-size: 16px;
   font-weight: bold;
   justify-items: center;
+  align-items: center;
   border: solid;
   border-width: 1px;
   border-color: cornflowerblue;
@@ -37,16 +38,19 @@
 @mixin memberlist-item($color) {
   @include memberlist-grid();
 
-  border-left: solid;
-  border-right: solid;
-  border-bottom: solid;
+  // border-left: solid;
+  // border-right: solid;
+  border-bottom: dashed;
   border-width: 1px;
   border-color: cornflowerblue;
 
-  color: $color;
+  // color: $color;
 
   align-items: center;
   justify-items: center;
+
+  font-size: 14px;
+  font-family: sans-serif;
 }
 
 .memberlist-item-m {
@@ -55,6 +59,14 @@
 
 .memberlist-item-f {
   @include memberlist-item(hotpink);
+}
+
+.memberlist-name-color-m {
+  color: blue;
+}
+
+.memberlist-name-color-f {
+  color: red;
 }
 
 
