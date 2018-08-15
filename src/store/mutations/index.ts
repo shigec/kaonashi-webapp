@@ -12,6 +12,11 @@ import {
   setActiveNotificationButton,
 } from './information';
 
+import {
+  setMembers,
+  setFilterTeam,
+} from './members';
+
 export default {
   setSampleText,
   countUp,
@@ -21,4 +26,6 @@ export default {
   getSelectedMenu,
   setActiveNotificationButton,
   setActiveMenuButton,
+  setMembers,
+  setFilterTeam,
 };

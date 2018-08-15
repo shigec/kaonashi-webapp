@@ -1,0 +1,29 @@
+<div>
+  <div id="memberlist">
+    <div id="memberlist-header">
+      <div>ID</div>
+      <div>名前</div>
+      <div>年齢</div>
+      <div>部</div>
+      <div>ユニット</div>
+      <div>チーム</div>
+      <div>役職</div>
+      <div>プロジェクト</div>
+    </div>
+    <div v-for="(item, index) in getListData()" id="memberlist-item">
+      <div v-if="shouldFilter(item.team)"></div>
+      <div v-else>
+        <div :class="[item.gender === 'M' ? 'memberlist-item-m' : 'memberlist-item-f']">
+          <div>{{item.id}}</div>
+          <div>{{item.name}}</div>
+          <div>{{item.age}}</div>
+          <div>{{item.dept}}</div>
+          <div>{{item.unit}}</div>
+          <div>{{item.team}}</div>
+          <div>{{item.position}}</div>
+          <div>{{item.projectName}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

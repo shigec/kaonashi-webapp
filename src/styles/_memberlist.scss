@@ -1,0 +1,60 @@
+#memberlist {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  overflow: auto;
+}
+
+@mixin memberlist-grid() {
+  display: grid;
+  grid-template-columns: 200px 150px 60px 60px 80px 80px 150px 1fr;
+  grid-template-rows: 1fr;
+}
+
+#memberlist-header {
+  @include memberlist-grid();
+
+  grid-column: 1 / 2;
+  grid-row: 1;
+
+  font-size: 16px;
+  font-weight: bold;
+  justify-items: center;
+  border: solid;
+  border-width: 1px;
+  border-color: cornflowerblue;
+  background-color: lightskyblue;
+}
+
+@mixin memberlist-item($color) {
+  @include memberlist-grid();
+
+  border-left: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: cornflowerblue;
+
+  color: $color;
+
+  align-items: center;
+  justify-items: center;
+}
+
+.memberlist-item-m {
+  @include memberlist-item(royalblue);
+}
+
+.memberlist-item-f {
+  @include memberlist-item(hotpink);
+}
+
+
