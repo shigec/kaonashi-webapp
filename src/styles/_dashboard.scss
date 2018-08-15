@@ -170,17 +170,16 @@
 
   font-size: 14px;
   color: white;
-  // font-weight: bold;
 }
 
 .dashboard-kind-system {
-  @include dashboard-kind(#ffb6c1)
+  @include dashboard-kind(#ffb6c1);
 }
 
 .dashboard-kind-member {
-  @include dashboard-kind(#65aa5a)
+  @include dashboard-kind(#65aa5a);
 }
 
 .dashboard-kind-project {
-  @include dashboard-kind(#77B8DA)
+  @include dashboard-kind(#77B8DA);
 }
