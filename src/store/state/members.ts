@@ -14,11 +14,13 @@ interface IMemberData {
 interface IMembersState {
   members: IMemberData[],
   filterTeam: string,
+  activeItemId: string,
 }
 
 const members: IMembersState = {
   members: [],
-  filterTeam: ''
+  filterTeam: '',
+  activeItemId: '',
 };
 
 export default members;

@@ -6,3 +6,11 @@ export function setFilterTeam(state: any, text: string): void {
   state.members.filterTeam = text;
 }
 
+export function setActiveItemId(state: any, id: string): void {
+  state.members.activeItemId = id;
+}
+
+export function clearActiveItemId(state: any): void {
+  state.members.activeItemId = '';
+}
+

@@ -15,7 +15,7 @@
 
 @mixin memberlist-grid() {
   display: grid;
-  grid-template-columns: 150px 150px repeat(4, 100px) 150px 1fr;
+  grid-template-columns: 150px repeat(4, 100px) 150px 1fr 80px;
   grid-template-rows: 1fr;
 }
 
@@ -51,6 +51,8 @@
 
   font-size: 14px;
   font-family: sans-serif;
+
+  height: 30px;
 }
 
 .memberlist-item-m {
@@ -69,4 +71,27 @@
   color: red;
 }
 
+@mixin memberlist-img-button($imgUrl) {
+  background: url($imgUrl) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  border: none;
+  margin: 1px 1px 1px 1px;
+}
 
+.memberlist-button-add {
+  @include memberlist-img-button('../resources/images/plus.svg');
+}
+.memberlist-button-delete {
+  @include memberlist-img-button('../resources/images/minus.svg');
+}
+.memberlist-button-favorite {
+  @include memberlist-img-button('../resources/images/favorite.svg');
+}
+.memberlist-button-favorite-active {
+  @include memberlist-img-button('../resources/images/favorite-active.svg');
+}
+.memberlist-item-active {
+  background-color: aliceblue;
+}
