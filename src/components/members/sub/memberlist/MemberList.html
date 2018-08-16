@@ -1,7 +1,6 @@
 <div>
   <div id="memberlist">
     <div id="memberlist-header">
-      <div>ID</div>
       <div>名前</div>
       <div>年齢</div>
       <div>部</div>
@@ -13,8 +12,7 @@
     <div v-for="(item, index) in getListData()" id="memberlist-item">
       <div v-if="shouldFilter(item.team)"></div>
       <div v-else>
-        <div :class="[item.gender === 'M' ? 'memberlist-item-m' : 'memberlist-item-f']">
-          <div>{{item.id}}</div>
+        <div v-on:mouseenter="setActiveItem(item.id)" v-on:mouseleave="clearActiveItem()" :class="[item.gender === 'M' ? 'memberlist-item-m' : 'memberlist-item-f', isActiveItem(item.id) ? 'memberlist-item-active' : '']">
           <div :class="[item.gender === 'M' ? 'memberlist-name-color-m' : 'memberlist-name-color-f']">{{item.name}}</div>
           <div>{{item.age}}</div>
           <div>{{item.dept}}</div>
@@ -22,6 +20,11 @@
           <div>{{item.team}}</div>
           <div>{{item.position}}</div>
           <div>{{item.projectName}}</div>
+          <div v-if="isActiveItem(item.id)">
+            <button class="memberlist-button-favorite" v-on:click="toggleFavorite(item.id)"></button>
+            <button class="memberlist-button-delete" v-on:click="deleteItem(item.id)"></button>
+            <button class="memberlist-button-add" v-on:click="addItem()"></button>
+          </div>
         </div>
       </div>
     </div>

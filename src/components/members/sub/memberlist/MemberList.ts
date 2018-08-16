@@ -30,4 +30,28 @@ export default class MemberList extends CompomentBase {
     return text.toLowerCase().indexOf(filterTeam.toLocaleLowerCase()) === -1;
   }
 
+  public toggleFavorite(id: string): void {
+
+  }
+
+  public deleteItem(id: string): void {
+
+  }
+
+  public addItem(): void {
+
+  }
+
+  public setActiveItem(id: string): void {
+    store.commit('setActiveItemId', id);
+  }
+
+  public clearActiveItem(): void {
+    store.commit('clearActiveItemId');
+  }
+
+  public isActiveItem(id: string): boolean {
+    return id === store.state.members.activeItemId;
+  }
+
 }

@@ -15,6 +15,8 @@ import {
 import {
   setMembers,
   setFilterTeam,
+  setActiveItemId,
+  clearActiveItemId,
 } from './members';
 
 export default {
@@ -28,4 +30,6 @@ export default {
   setActiveMenuButton,
   setMembers,
   setFilterTeam,
+  setActiveItemId,
+  clearActiveItemId,
 };
