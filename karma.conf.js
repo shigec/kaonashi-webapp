@@ -25,12 +25,13 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'karma-typescript'],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*.spec.ts'
+      'src/**/*.ts',
+      'test/**/*.ts'
     ],
 
 
@@ -42,8 +43,8 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/**/*.ts': ['coverage', 'webpack', 'sourcemap'],
-      'test/**/*.ts': ['webpack', 'sourcemap']
+      'src/**/*.ts': ['karma-typescript'],
+      'test/**/*.ts': ['karma-typescript']
     },
 
     // Webpack settings.
@@ -52,19 +53,8 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'junit', 'coverage'],
+    reporters: ['progress', 'karma-typescript'],
 
-    junitReporter: {
-      outputDir: 'report'
-    },
-
-    coverageReporter: {
-      dir: 'report/coverage',
-      reporters: [
-        {type: 'html'},
-        {type: 'cobertura'}
-      ]
-    },
 
     // web server port
     port: 9876,
