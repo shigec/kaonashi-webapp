@@ -38,9 +38,9 @@ export default class MemberList extends CompomentBase {
 
   }
 
-  public addItem(): void {
+  // public addItem(): void {
 
-  }
+  // }
 
   public setActiveItem(id: string): void {
     store.commit('setActiveItemId', id);
@@ -52,6 +52,10 @@ export default class MemberList extends CompomentBase {
 
   public isActiveItem(id: string): boolean {
     return id === store.state.members.activeItemId;
+  }
+
+  public openEditor(id: string): void {
+    store.commit('setEditMode', true);
   }
 
 }

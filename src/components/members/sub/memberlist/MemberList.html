@@ -23,7 +23,7 @@
           <div v-if="isActiveItem(item.id)">
             <button class="memberlist-button-favorite" v-on:click="toggleFavorite(item.id)"></button>
             <button class="memberlist-button-delete" v-on:click="deleteItem(item.id)"></button>
-            <button class="memberlist-button-add" v-on:click="addItem()"></button>
+            <button class="memberlist-button-add" v-on:click="openEditor(item.id)"></button>
           </div>
         </div>
       </div>

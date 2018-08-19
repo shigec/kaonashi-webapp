@@ -17,6 +17,7 @@ import {
   setFilterTeam,
   setActiveItemId,
   clearActiveItemId,
+  setEditMode,
 } from './members';
 
 export default {
@@ -32,4 +33,5 @@ export default {
   setFilterTeam,
   setActiveItemId,
   clearActiveItemId,
+  setEditMode,
 };

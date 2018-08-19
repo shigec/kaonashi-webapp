@@ -4,6 +4,7 @@ import store from '../../store/index';
 import CompomentBase from '../ComponentBase';
 import MemberSearch from './sub/membersearch/MemberSearch';
 import MemberList from './sub/memberlist/MemberList';
+import MemberEdit from './sub/memberedit/MemberEdit';
 
 @Component({
   template: require('./Members.html'),
@@ -11,6 +12,7 @@ import MemberList from './sub/memberlist/MemberList';
   components: {
     MemberSearch,
     MemberList,
+    MemberEdit,
   },
 })
 
@@ -59,5 +61,9 @@ export default class Members extends CompomentBase {
       {id:'id0030', name: '10さん', gender: 'F', age: 33, dept: 'SS', unit: 'C&S', team: 'CS32', position: '一般', projectName: 'PJ0010', projectId: 'p0010'},
     ]
     return members;
+  }
+
+  public isEditMode(): boolean {
+    return store.state.members.isEditMode;
   }
 }
