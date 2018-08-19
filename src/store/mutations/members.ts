@@ -14,3 +14,7 @@ export function clearActiveItemId(state: any): void {
   state.members.activeItemId = '';
 }
 
+export function setEditMode(state: any, mode: boolean) {
+  state.members.isEditMode = mode;
+}
+

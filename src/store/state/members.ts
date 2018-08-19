@@ -15,12 +15,14 @@ interface IMembersState {
   members: IMemberData[],
   filterTeam: string,
   activeItemId: string,
+  isEditMode: boolean,
 }
 
 const members: IMembersState = {
   members: [],
   filterTeam: '',
   activeItemId: '',
+  isEditMode: false,
 };
 
 export default members;

@@ -2,5 +2,8 @@
   <div id="members">
     <MemberSearch id="members-search-area" sampleText="Member Search Component"/>
     <MemberList id="members-list-area"/>
+    <div v-if="isEditMode()">
+      <MemberEdit/>
+    </div>
   </div>
 </div>
